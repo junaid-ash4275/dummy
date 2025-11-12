@@ -2,6 +2,7 @@ import QuoteGenerator from './components/QuoteGenerator';
 import ColorPalette from './components/ColorPalette';
 import PomodoroTimer from './components/PomodoroTimer';
 import TaskList from './components/TaskList';
+import WeatherDashboard from './components/WeatherDashboard';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <ColorPalette />
       <PomodoroTimer />
       <TaskList />
+      <WeatherDashboard />
     </div>
   );
 }
