@@ -3,6 +3,7 @@ import ColorPalette from './components/ColorPalette';
 import PomodoroTimer from './components/PomodoroTimer';
 import TaskList from './components/TaskList';
 import WeatherDashboard from './components/WeatherDashboard';
+import DiceRoller from './components/DiceRoller';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <PomodoroTimer />
       <TaskList />
       <WeatherDashboard />
+      <DiceRoller />
     </div>
   );
 }
