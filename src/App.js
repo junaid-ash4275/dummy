@@ -4,6 +4,7 @@ import PomodoroTimer from './components/PomodoroTimer';
 import TaskList from './components/TaskList';
 import WeatherDashboard from './components/WeatherDashboard';
 import DiceRoller from './components/DiceRoller';
+import RandomFactGenerator from './components/RandomFactGenerator';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <TaskList />
       <WeatherDashboard />
       <DiceRoller />
+      <RandomFactGenerator />
     </div>
   );
 }
