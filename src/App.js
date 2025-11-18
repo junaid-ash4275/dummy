@@ -5,6 +5,7 @@ import TaskList from './components/TaskList';
 import WeatherDashboard from './components/WeatherDashboard';
 import DiceRoller from './components/DiceRoller';
 import RandomFactGenerator from './components/RandomFactGenerator';
+import QuickNotes from './components/QuickNotes';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <WeatherDashboard />
       <DiceRoller />
       <RandomFactGenerator />
+      <QuickNotes />
     </div>
   );
 }
