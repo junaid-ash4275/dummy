@@ -4,10 +4,12 @@ const JokeGenerator = () => {
   const [joke, setJoke] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showPunchline, setShowPunchline] = useState(false);
 
   const fetchJoke = async () => {
     try {
       setLoading(true);
+      setShowPunchline(false);
       const response = await fetch(
         "https://official-joke-api.appspot.com/random_joke"
       );
@@ -20,6 +22,10 @@ const JokeGenerator = () => {
         punchline: data.punchline,
       });
       setError(null);
+
+      // Auto-show punchline after a short delay for effect
+      setTimeout(() => setShowPunchline(true), 2000);
+
     } catch (err) {
       setError("Failed to load joke. Please try again.");
       console.error("Error fetching joke:", err);
@@ -33,87 +39,41 @@ const JokeGenerator = () => {
   }, []);
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 mb-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-        <span className="inline-block border-b-2 border-indigo-100 pb-1">
-          Random Joke
-        </span>
-      </h2>
+    <div className="flex justify-center items-center min-h-[400px] p-5 bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-500 rounded-2xl m-5 shadow-2xl">
+      <div className="bg-white p-10 rounded-xl max-w-2xl w-full text-center shadow-xl relative">
+        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent">
+          Random Joke Generator
+        </h2>
 
-      <div className="min-h-32 p-6 bg-gray-50 rounded-lg mb-6 border border-gray-100">
-        {loading ? (
-          <div className="flex items-center justify-center h-full">
-            <div className="animate-pulse flex space-x-4">
-              <div className="h-4 w-4 bg-indigo-200 rounded-full"></div>
-              <div className="h-4 w-4 bg-indigo-200 rounded-full"></div>
-              <div className="h-4 w-4 bg-indigo-200 rounded-full"></div>
+        <div className="min-h-[200px] flex flex-col justify-center items-center mb-8">
+          {loading ? (
+            <div className="flex flex-col items-center justify-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mb-4"></div>
+              <p className="text-gray-500 animate-pulse">Finding a funny one...</p>
             </div>
-          </div>
-        ) : error ? (
-          <p className="text-red-500 text-center">{error}</p>
-        ) : (
-          <div className="text-center">
-            <p className="text-lg text-gray-700 mb-4 italic">"{joke.setup}"</p>
-            <p className="text-lg font-medium text-indigo-600 transition-all duration-300 transform hover:scale-105 inline-block">
-              {joke.punchline}
-            </p>
-          </div>
-        )}
-      </div>
+          ) : error ? (
+            <p className="text-red-500 text-lg">{error}</p>
+          ) : (
+            <div className="space-y-6">
+              <p className="text-2xl text-gray-700 font-medium leading-relaxed">
+                "{joke.setup}"
+              </p>
 
-      <div className="flex justify-center">
+              <div className={`transition-all duration-500 transform ${showPunchline ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                <p className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-indigo-600 bg-clip-text text-transparent">
+                  {joke.punchline} 😆
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+
         <button
           onClick={fetchJoke}
           disabled={loading}
-          className={`py-2 px-6 rounded-full text-white font-medium transition-all duration-300 transform hover:scale-105 ${
-            loading
-              ? "bg-indigo-300 cursor-not-allowed"
-              : "bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 shadow-md"
-          }`}
+          className="bg-gradient-to-r from-cyan-500 to-indigo-600 text-white border-none py-3 px-8 text-base font-semibold rounded-full cursor-pointer transition-all duration-300 uppercase tracking-wider hover:transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-400/50 active:transform-none disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
         >
-          {loading ? (
-            <span className="flex items-center">
-              <svg
-                className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
-              </svg>
-              Loading...
-            </span>
-          ) : (
-            <span className="flex items-center">
-              <svg
-                className="w-5 h-5 mr-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                />
-              </svg>
-              Another Joke
-            </span>
-          )}
+          {loading ? 'Loading...' : 'Get Another Joke'}
         </button>
       </div>
     </div>
