@@ -7,12 +7,14 @@ import DiceRoller from "./components/DiceRoller";
 import RandomFactGenerator from "./components/RandomFactGenerator";
 import QuickNotes from "./components/QuickNotes";
 import JokeGenerator from "./components/JokeGenerator";
+import TriviaQuiz from "./components/TriviaQuiz";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <QuoteGenerator />
       <JokeGenerator />
+      <TriviaQuiz />
       <ColorPalette />
       <PomodoroTimer />
       <TaskList />
