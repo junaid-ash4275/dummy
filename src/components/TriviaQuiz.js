@@ -27,7 +27,7 @@ const TriviaQuiz = () => {
         return shuffled;
     };
 
-    const fetchQuestion = async () => {
+    const fetchQuestion = async (retryCount = 0) => {
         try {
             setLoading(true);
             setSelectedAnswer(null);
@@ -35,11 +35,30 @@ const TriviaQuiz = () => {
 
             const response = await fetch('https://opentdb.com/api.php?amount=1&type=multiple');
 
+            // Handle rate limiting (429 error)
+            if (response.status === 429) {
+                const waitTime = Math.min(1000 * Math.pow(2, retryCount), 10000); // Exponential backoff, max 10s
+
+                if (retryCount < 3) {
+                    setError(`Rate limit reached. Retrying in ${waitTime / 1000} seconds...`);
+                    await new Promise(resolve => setTimeout(resolve, waitTime));
+                    return fetchQuestion(retryCount + 1);
+                } else {
+                    throw new Error('RATE_LIMIT');
+                }
+            }
+
             if (!response.ok) {
                 throw new Error('Failed to fetch trivia question');
             }
 
             const data = await response.json();
+
+            // Check if API returned valid data
+            if (!data.results || data.results.length === 0) {
+                throw new Error('No questions available');
+            }
+
             const questionData = data.results[0];
 
             // Combine correct and incorrect answers and shuffle them
@@ -58,7 +77,11 @@ const TriviaQuiz = () => {
             setShuffledAnswers(shuffleArray(allAnswers.map(decodeHTML)));
             setError(null);
         } catch (err) {
-            setError('Failed to load trivia question. Please try again.');
+            if (err.message === 'RATE_LIMIT') {
+                setError('⏱️ Too many requests! The trivia API has rate-limited us. Please wait a minute before trying again.');
+            } else {
+                setError('Failed to load trivia question. Please try again later.');
+            }
             console.error('Error fetching trivia:', err);
         } finally {
             setLoading(false);
@@ -132,7 +155,15 @@ const TriviaQuiz = () => {
                             <p className="text-gray-500 animate-pulse text-lg">Loading question...</p>
                         </div>
                     ) : error ? (
-                        <p className="text-red-500 text-lg">{error}</p>
+                        <div className="flex flex-col items-center justify-center space-y-4">
+                            <p className="text-red-500 text-lg text-center">{error}</p>
+                            <button
+                                onClick={() => fetchQuestion()}
+                                className="bg-gradient-to-r from-red-500 to-orange-600 text-white border-none py-2 px-6 text-sm font-semibold rounded-full cursor-pointer transition-all duration-300 uppercase tracking-wider hover:transform hover:-translate-y-0.5 hover:shadow-lg hover:shadow-red-400/50 active:transform-none"
+                            >
+                                Retry
+                            </button>
+                        </div>
                     ) : (
                         <div className="w-full space-y-6">
                             {/* Category and Difficulty */}
@@ -194,12 +225,12 @@ const TriviaQuiz = () => {
                             {/* Result Message */}
                             {showResult && (
                                 <div className={`mt-6 p-4 rounded-lg transition-all duration-500 transform ${selectedAnswer === question.correctAnswer
-                                        ? 'bg-green-100 border-2 border-green-500'
-                                        : 'bg-red-100 border-2 border-red-500'
+                                    ? 'bg-green-100 border-2 border-green-500'
+                                    : 'bg-red-100 border-2 border-red-500'
                                     }`}>
                                     <p className={`text-lg font-bold ${selectedAnswer === question.correctAnswer
-                                            ? 'text-green-800'
-                                            : 'text-red-800'
+                                        ? 'text-green-800'
+                                        : 'text-red-800'
                                         }`}>
                                         {selectedAnswer === question.correctAnswer
                                             ? '🎉 Correct! Well done!'
