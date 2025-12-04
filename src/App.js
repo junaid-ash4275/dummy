@@ -8,6 +8,7 @@ import RandomFactGenerator from "./components/RandomFactGenerator";
 import QuickNotes from "./components/QuickNotes";
 import JokeGenerator from "./components/JokeGenerator";
 import TriviaQuiz from "./components/TriviaQuiz";
+import UnitConverter from "./components/UnitConverter";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <DiceRoller />
       <RandomFactGenerator />
       <QuickNotes />
+      <UnitConverter />
     </div>
   );
 }
