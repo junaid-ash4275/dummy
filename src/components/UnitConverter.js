@@ -34,12 +34,12 @@ const UnitConverter = () => {
         // Convert to Celsius first
         let celsius;
         if (from === 'celsius') celsius = value;
-        else if (from === 'fahrenheit') celsius = (value - 32) * 5/9;
+        else if (from === 'fahrenheit') celsius = (value - 32) * 5 / 9;
         else if (from === 'kelvin') celsius = value - 273.15;
 
         // Convert from Celsius to target
         if (to === 'celsius') return celsius;
-        else if (to === 'fahrenheit') return (celsius * 9/5) + 32;
+        else if (to === 'fahrenheit') return (celsius * 9 / 5) + 32;
         else if (to === 'kelvin') return celsius + 273.15;
       }
     }
@@ -77,7 +77,7 @@ const UnitConverter = () => {
     setCategory(newCategory);
     setInputValue('');
     setResult('');
-    
+
     // Set default units for the category
     if (newCategory === 'length') {
       setFromUnit('meters');
@@ -107,7 +107,7 @@ const UnitConverter = () => {
     const tempUnit = fromUnit;
     setFromUnit(toUnit);
     setToUnit(tempUnit);
-    
+
     // Swap values
     if (result) {
       setInputValue(result);
@@ -125,31 +125,28 @@ const UnitConverter = () => {
         {/* Category Selector */}
         <div className="flex gap-2 mb-6 justify-center flex-wrap">
           <button
-            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${
-              category === 'length'
+            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${category === 'length'
                 ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
                 : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-            }`}
+              }`}
             onClick={() => handleCategoryChange('length')}
           >
             Length
           </button>
           <button
-            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${
-              category === 'weight'
+            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${category === 'weight'
                 ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
                 : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-            }`}
+              }`}
             onClick={() => handleCategoryChange('weight')}
           >
             Weight
           </button>
           <button
-            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${
-              category === 'temperature'
+            className={`py-2 px-4 rounded-full font-semibold transition-all duration-300 text-sm ${category === 'temperature'
                 ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-md'
                 : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-            }`}
+              }`}
             onClick={() => handleCategoryChange('temperature')}
           >
             Temperature
@@ -163,18 +160,18 @@ const UnitConverter = () => {
             <label className="block text-sm font-medium text-gray-600 mb-2">
               From
             </label>
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="number"
                 value={inputValue}
                 onChange={handleInputChange}
                 placeholder="Enter value"
-                className="flex-1 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors"
+                className="flex-1 px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors min-w-0"
               />
               <select
                 value={fromUnit}
                 onChange={handleFromUnitChange}
-                className="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white capitalize"
+                className="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white capitalize w-full sm:w-auto"
               >
                 {conversions[category].units.map(unit => (
                   <option key={unit} value={unit} className="capitalize">
@@ -204,18 +201,18 @@ const UnitConverter = () => {
             <label className="block text-sm font-medium text-gray-600 mb-2">
               To
             </label>
-            <div className="flex gap-2">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="text"
                 value={result}
                 readOnly
                 placeholder="Result"
-                className="flex-1 px-4 py-2 border-2 border-orange-200 rounded-lg bg-white font-semibold text-orange-600"
+                className="flex-1 px-4 py-2 border-2 border-orange-200 rounded-lg bg-white font-semibold text-orange-600 min-w-0"
               />
               <select
                 value={toUnit}
                 onChange={handleToUnitChange}
-                className="px-4 py-2 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white capitalize"
+                className="px-4 py-2 border-2 border-orange-200 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white capitalize w-full sm:w-auto"
               >
                 {conversions[category].units.map(unit => (
                   <option key={unit} value={unit} className="capitalize">

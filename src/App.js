@@ -9,6 +9,7 @@ import QuickNotes from "./components/QuickNotes";
 import JokeGenerator from "./components/JokeGenerator";
 import TriviaQuiz from "./components/TriviaQuiz";
 import UnitConverter from "./components/UnitConverter";
+import CurrencyConverter from "./components/CurrencyConverter";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <RandomFactGenerator />
       <QuickNotes />
       <UnitConverter />
+      <CurrencyConverter />
     </div>
   );
 }
