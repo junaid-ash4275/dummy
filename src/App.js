@@ -10,6 +10,7 @@ import JokeGenerator from "./components/JokeGenerator";
 import TriviaQuiz from "./components/TriviaQuiz";
 import UnitConverter from "./components/UnitConverter";
 import CurrencyConverter from "./components/CurrencyConverter";
+import PasswordGenerator from "./components/PasswordGenerator";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <QuickNotes />
       <UnitConverter />
       <CurrencyConverter />
+      <PasswordGenerator />
     </div>
   );
 }
