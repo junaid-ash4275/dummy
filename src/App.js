@@ -11,10 +11,12 @@ import TriviaQuiz from "./components/TriviaQuiz";
 import UnitConverter from "./components/UnitConverter";
 import CurrencyConverter from "./components/CurrencyConverter";
 import PasswordGenerator from "./components/PasswordGenerator";
+import DailyMotivation from "./components/DailyMotivation";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <DailyMotivation />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
