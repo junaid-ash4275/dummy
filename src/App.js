@@ -12,6 +12,7 @@ import UnitConverter from "./components/UnitConverter";
 import CurrencyConverter from "./components/CurrencyConverter";
 import PasswordGenerator from "./components/PasswordGenerator";
 import DailyMotivation from "./components/DailyMotivation";
+import BMICalculator from "./components/BMICalculator";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
       <UnitConverter />
       <CurrencyConverter />
       <PasswordGenerator />
+      <BMICalculator />
     </div>
   );
 }
