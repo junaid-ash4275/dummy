@@ -14,6 +14,7 @@ import PasswordGenerator from "./components/PasswordGenerator";
 import DailyMotivation from "./components/DailyMotivation";
 import BMICalculator from "./components/BMICalculator";
 import TipCalculator from "./components/TipCalculator";
+import AgeCalculator from "./components/AgeCalculator";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <PasswordGenerator />
       <BMICalculator />
       <TipCalculator />
+      <AgeCalculator />
     </div>
   );
 }
