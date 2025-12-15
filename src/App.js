@@ -15,6 +15,7 @@ import DailyMotivation from "./components/DailyMotivation";
 import BMICalculator from "./components/BMICalculator";
 import TipCalculator from "./components/TipCalculator";
 import AgeCalculator from "./components/AgeCalculator";
+import TextAnalyzer from "./components/TextAnalyzer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <BMICalculator />
       <TipCalculator />
       <AgeCalculator />
+      <TextAnalyzer />
     </div>
   );
 }
