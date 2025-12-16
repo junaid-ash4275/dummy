@@ -16,6 +16,7 @@ import BMICalculator from "./components/BMICalculator";
 import TipCalculator from "./components/TipCalculator";
 import AgeCalculator from "./components/AgeCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
+import BreathingExercise from "./components/BreathingExercise";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       <TipCalculator />
       <AgeCalculator />
       <TextAnalyzer />
+      <BreathingExercise />
     </div>
   );
 }
