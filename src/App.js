@@ -17,6 +17,7 @@ import TipCalculator from "./components/TipCalculator";
 import AgeCalculator from "./components/AgeCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
+import Stopwatch from "./components/Stopwatch";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <AgeCalculator />
       <TextAnalyzer />
       <BreathingExercise />
+      <Stopwatch />
     </div>
   );
 }
