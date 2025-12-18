@@ -18,11 +18,13 @@ import AgeCalculator from "./components/AgeCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
+import HabitTracker from "./components/HabitTracker";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <DailyMotivation />
+      <HabitTracker />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
