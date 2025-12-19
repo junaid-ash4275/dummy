@@ -19,12 +19,14 @@ import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
 import HabitTracker from "./components/HabitTracker";
+import FinanceTracker from "./components/FinanceTracker";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <DailyMotivation />
       <HabitTracker />
+      <FinanceTracker />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
