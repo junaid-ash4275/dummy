@@ -20,6 +20,7 @@ import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
 import HabitTracker from "./components/HabitTracker";
 import FinanceTracker from "./components/FinanceTracker";
+import CryptoPriceTracker from "./components/CryptoPriceTracker";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <DailyMotivation />
       <HabitTracker />
       <FinanceTracker />
+      <CryptoPriceTracker />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
