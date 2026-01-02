@@ -22,10 +22,12 @@ import HabitTracker from "./components/HabitTracker";
 import FinanceTracker from "./components/FinanceTracker";
 import CryptoPriceTracker from "./components/CryptoPriceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
+import ShadowGenerator from "./components/ShadowGenerator";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ShadowGenerator />
       <QRCodeGenerator />
       <DailyMotivation />
       <HabitTracker />
