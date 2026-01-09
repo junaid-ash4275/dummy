@@ -23,11 +23,13 @@ import FinanceTracker from "./components/FinanceTracker";
 import CryptoPriceTracker from "./components/CryptoPriceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import ShadowGenerator from "./components/ShadowGenerator";
+import GradientGenerator from "./components/GradientGenerator";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <ShadowGenerator />
+      <GradientGenerator />
       <QRCodeGenerator />
       <DailyMotivation />
       <HabitTracker />
