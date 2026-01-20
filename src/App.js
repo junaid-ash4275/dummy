@@ -24,10 +24,12 @@ import CryptoPriceTracker from "./components/CryptoPriceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import ShadowGenerator from "./components/ShadowGenerator";
 import GradientGenerator from "./components/GradientGenerator";
+import MorseCodeConverter from "./components/MorseCodeConverter";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <MorseCodeConverter />
       <ShadowGenerator />
       <GradientGenerator />
       <QRCodeGenerator />
