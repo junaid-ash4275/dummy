@@ -25,10 +25,12 @@ import QRCodeGenerator from "./components/QRCodeGenerator";
 import ShadowGenerator from "./components/ShadowGenerator";
 import GradientGenerator from "./components/GradientGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
+import JsonFormatter from "./components/JsonFormatter";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <JsonFormatter />
       <MorseCodeConverter />
       <ShadowGenerator />
       <GradientGenerator />
