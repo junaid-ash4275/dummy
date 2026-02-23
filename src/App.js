@@ -26,10 +26,12 @@ import ShadowGenerator from "./components/ShadowGenerator";
 import GradientGenerator from "./components/GradientGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
 import JsonFormatter from "./components/JsonFormatter";
+import MarkdownPreviewer from "./components/MarkdownPreviewer";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <MarkdownPreviewer />
       <JsonFormatter />
       <MorseCodeConverter />
       <ShadowGenerator />
