@@ -27,10 +27,12 @@ import GradientGenerator from "./components/GradientGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
 import JsonFormatter from "./components/JsonFormatter";
 import MarkdownPreviewer from "./components/MarkdownPreviewer";
+import FlashcardApp from "./components/FlashcardApp";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <FlashcardApp />
       <MarkdownPreviewer />
       <JsonFormatter />
       <MorseCodeConverter />
