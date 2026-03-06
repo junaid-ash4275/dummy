@@ -1,4 +1,5 @@
 import ExpenseSplitter from "./components/ExpenseSplitter";
+import LoanCalculator from "./components/LoanCalculator";
 import QuoteGenerator from "./components/QuoteGenerator";
 import ColorPalette from "./components/ColorPalette";
 import PomodoroTimer from "./components/PomodoroTimer";
@@ -31,6 +32,7 @@ import WorldClock from "./components/WorldClock";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <LoanCalculator />
       <ExpenseSplitter />
       <WorldClock />
       <FlashcardApp />
