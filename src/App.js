@@ -19,12 +19,9 @@ import AgeCalculator from "./components/AgeCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
-import HabitTracker from "./components/HabitTracker";
 import FinanceTracker from "./components/FinanceTracker";
 import CryptoPriceTracker from "./components/CryptoPriceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
-import ShadowGenerator from "./components/ShadowGenerator";
-import GradientGenerator from "./components/GradientGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
 import JsonFormatter from "./components/JsonFormatter";
 import MarkdownPreviewer from "./components/MarkdownPreviewer";
@@ -40,11 +37,8 @@ function App() {
       <MarkdownPreviewer />
       <JsonFormatter />
       <MorseCodeConverter />
-      <ShadowGenerator />
-      <GradientGenerator />
       <QRCodeGenerator />
       <DailyMotivation />
-      <HabitTracker />
       <FinanceTracker />
       <CryptoPriceTracker />
       <QuoteGenerator />
