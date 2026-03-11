@@ -1,6 +1,7 @@
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import LoanCalculator from "./components/LoanCalculator";
 import WaterTracker from "./components/WaterTracker";
+import MoodTracker from "./components/MoodTracker";
 import QuoteGenerator from "./components/QuoteGenerator";
 import ColorPalette from "./components/ColorPalette";
 import PomodoroTimer from "./components/PomodoroTimer";
@@ -33,6 +34,7 @@ import WorldClock from "./components/WorldClock";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <MoodTracker />
       <WaterTracker />
       <LoanCalculator />
       <ExpenseSplitter />
