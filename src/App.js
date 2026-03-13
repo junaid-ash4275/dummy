@@ -1,4 +1,5 @@
 import ExpenseSplitter from "./components/ExpenseSplitter";
+import MemoryGame from "./components/MemoryGame";
 import LoanCalculator from "./components/LoanCalculator";
 import WaterTracker from "./components/WaterTracker";
 import MoodTracker from "./components/MoodTracker";
@@ -35,6 +36,7 @@ import RecipeFinder from "./components/RecipeFinder";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <MemoryGame />
       <RecipeFinder />
       <MoodTracker />
       <WaterTracker />
