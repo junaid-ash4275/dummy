@@ -32,10 +32,12 @@ import MarkdownPreviewer from "./components/MarkdownPreviewer";
 import FlashcardApp from "./components/FlashcardApp";
 import WorldClock from "./components/WorldClock";
 import RecipeFinder from "./components/RecipeFinder";
+import ZenFocus from "./components/ZenFocus";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ZenFocus />
       <MemoryGame />
       <RecipeFinder />
       <MoodTracker />
