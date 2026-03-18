@@ -1,3 +1,4 @@
+import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import MemoryGame from "./components/MemoryGame";
 import LoanCalculator from "./components/LoanCalculator";
@@ -37,6 +38,7 @@ import ZenFocus from "./components/ZenFocus";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <GlassmorphismGenerator />
       <ZenFocus />
       <MemoryGame />
       <RecipeFinder />
