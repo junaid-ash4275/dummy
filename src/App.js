@@ -20,24 +20,23 @@ import PasswordGenerator from "./components/PasswordGenerator";
 import DailyMotivation from "./components/DailyMotivation";
 import BMICalculator from "./components/BMICalculator";
 import TipCalculator from "./components/TipCalculator";
-import AgeCalculator from "./components/AgeCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
 import FinanceTracker from "./components/FinanceTracker";
-import CryptoPriceTracker from "./components/CryptoPriceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
 import JsonFormatter from "./components/JsonFormatter";
 import MarkdownPreviewer from "./components/MarkdownPreviewer";
-import FlashcardApp from "./components/FlashcardApp";
 import WorldClock from "./components/WorldClock";
 import RecipeFinder from "./components/RecipeFinder";
 import ZenFocus from "./components/ZenFocus";
+import TimeZoneConverter from "./components/TimeZoneConverter";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <TimeZoneConverter />
       <GlassmorphismGenerator />
       <ZenFocus />
       <MemoryGame />
@@ -47,14 +46,12 @@ function App() {
       <LoanCalculator />
       <ExpenseSplitter />
       <WorldClock />
-      <FlashcardApp />
       <MarkdownPreviewer />
       <JsonFormatter />
       <MorseCodeConverter />
       <QRCodeGenerator />
       <DailyMotivation />
       <FinanceTracker />
-      <CryptoPriceTracker />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
@@ -70,7 +67,6 @@ function App() {
       <PasswordGenerator />
       <BMICalculator />
       <TipCalculator />
-      <AgeCalculator />
       <TextAnalyzer />
       <BreathingExercise />
       <Stopwatch />
