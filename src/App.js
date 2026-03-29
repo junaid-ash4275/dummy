@@ -1,7 +1,7 @@
+import SignaturePad from "./components/SignaturePad";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import MemoryGame from "./components/MemoryGame";
-import LoanCalculator from "./components/LoanCalculator";
 import WaterTracker from "./components/WaterTracker";
 import MoodTracker from "./components/MoodTracker";
 import QuoteGenerator from "./components/QuoteGenerator";
@@ -37,13 +37,13 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <TimeZoneConverter />
+      <SignaturePad />
       <GlassmorphismGenerator />
       <ZenFocus />
       <MemoryGame />
       <RecipeFinder />
       <MoodTracker />
       <WaterTracker />
-      <LoanCalculator />
       <ExpenseSplitter />
       <WorldClock />
       <MarkdownPreviewer />
