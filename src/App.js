@@ -35,7 +35,8 @@ import TimeZoneConverter from "./components/TimeZoneConverter";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-10">
+      <LifeProgressTracker />
       <TimeZoneConverter />
       <SignaturePad />
       <GlassmorphismGenerator />
