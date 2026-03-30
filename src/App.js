@@ -1,4 +1,4 @@
-import LifeProgressTracker from "./components/LifeProgressTracker";
+import SignaturePad from "./components/SignaturePad";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import MemoryGame from "./components/MemoryGame";
@@ -38,6 +38,7 @@ function App() {
     <div className="min-h-screen bg-gray-50 pb-10">
       <LifeProgressTracker />
       <TimeZoneConverter />
+      <SignaturePad />
       <GlassmorphismGenerator />
       <ZenFocus />
       <MemoryGame />
