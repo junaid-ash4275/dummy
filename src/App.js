@@ -1,7 +1,7 @@
+import LifeProgressTracker from "./components/LifeProgressTracker";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import MemoryGame from "./components/MemoryGame";
-import LoanCalculator from "./components/LoanCalculator";
 import WaterTracker from "./components/WaterTracker";
 import MoodTracker from "./components/MoodTracker";
 import QuoteGenerator from "./components/QuoteGenerator";
@@ -35,7 +35,8 @@ import TimeZoneConverter from "./components/TimeZoneConverter";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-10">
+      <LifeProgressTracker />
       <TimeZoneConverter />
       <GlassmorphismGenerator />
       <ZenFocus />
@@ -43,7 +44,6 @@ function App() {
       <RecipeFinder />
       <MoodTracker />
       <WaterTracker />
-      <LoanCalculator />
       <ExpenseSplitter />
       <WorldClock />
       <MarkdownPreviewer />
