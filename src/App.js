@@ -1,3 +1,4 @@
+import GradientGenerator from "./components/GradientGenerator";
 import SignaturePad from "./components/SignaturePad";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
@@ -32,10 +33,12 @@ import WorldClock from "./components/WorldClock";
 import RecipeFinder from "./components/RecipeFinder";
 import ZenFocus from "./components/ZenFocus";
 import TimeZoneConverter from "./components/TimeZoneConverter";
+import LifeProgressTracker from "./components/LifeProgressTracker";
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <GradientGenerator />
       <LifeProgressTracker />
       <TimeZoneConverter />
       <SignaturePad />
