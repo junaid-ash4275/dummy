@@ -34,6 +34,7 @@ import RecipeFinder from "./components/RecipeFinder";
 import ZenFocus from "./components/ZenFocus";
 import TimeZoneConverter from "./components/TimeZoneConverter";
 import LifeProgressTracker from "./components/LifeProgressTracker";
+import FlashcardApp from "./components/FlashcardApp";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       <GradientGenerator />
       <LifeProgressTracker />
       <TimeZoneConverter />
+      <FlashcardApp />
       <SignaturePad />
       <GlassmorphismGenerator />
       <ZenFocus />
