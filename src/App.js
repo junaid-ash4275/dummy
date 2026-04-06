@@ -1,3 +1,4 @@
+import ReadingSpeedTest from "./components/ReadingSpeedTest";
 import GradientGenerator from "./components/GradientGenerator";
 import SignaturePad from "./components/SignaturePad";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
@@ -43,6 +44,7 @@ function App() {
       <LifeProgressTracker />
       <TimeZoneConverter />
       <FlashcardApp />
+      <ReadingSpeedTest />
       <SignaturePad />
       <GlassmorphismGenerator />
       <ZenFocus />
