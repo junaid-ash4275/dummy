@@ -1,11 +1,9 @@
 import ReadingSpeedTest from "./components/ReadingSpeedTest";
 import GradientGenerator from "./components/GradientGenerator";
 import SignaturePad from "./components/SignaturePad";
-import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import ExpenseSplitter from "./components/ExpenseSplitter";
 import MemoryGame from "./components/MemoryGame";
 import WaterTracker from "./components/WaterTracker";
-import MoodTracker from "./components/MoodTracker";
 import QuoteGenerator from "./components/QuoteGenerator";
 import ColorPalette from "./components/ColorPalette";
 import PomodoroTimer from "./components/PomodoroTimer";
@@ -25,7 +23,6 @@ import TipCalculator from "./components/TipCalculator";
 import TextAnalyzer from "./components/TextAnalyzer";
 import BreathingExercise from "./components/BreathingExercise";
 import Stopwatch from "./components/Stopwatch";
-import FinanceTracker from "./components/FinanceTracker";
 import QRCodeGenerator from "./components/QRCodeGenerator";
 import MorseCodeConverter from "./components/MorseCodeConverter";
 import JsonFormatter from "./components/JsonFormatter";
@@ -46,11 +43,9 @@ function App() {
       <FlashcardApp />
       <ReadingSpeedTest />
       <SignaturePad />
-      <GlassmorphismGenerator />
       <ZenFocus />
       <MemoryGame />
       <RecipeFinder />
-      <MoodTracker />
       <WaterTracker />
       <ExpenseSplitter />
       <WorldClock />
@@ -59,7 +54,6 @@ function App() {
       <MorseCodeConverter />
       <QRCodeGenerator />
       <DailyMotivation />
-      <FinanceTracker />
       <QuoteGenerator />
       <JokeGenerator />
       <TriviaQuiz />
