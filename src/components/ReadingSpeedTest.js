@@ -5,7 +5,6 @@ const ReadingSpeedTest = () => {
   const [selectedText, setSelectedText] = useState("short");
   const [customText, setCustomText] = useState("");
   const [startTime, setStartTime] = useState(null);
-  const [endTime, setEndTime] = useState(null);
   const [wpm, setWpm] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
   const timerRef = useRef(null);
@@ -49,7 +48,6 @@ const ReadingSpeedTest = () => {
 
   const finishTest = () => {
     const end = Date.now();
-    setEndTime(end);
     const durationInMinutes = (end - startTime) / 60000;
     const calculatedWpm = Math.round(wordCount / durationInMinutes);
     setWpm(calculatedWpm);
