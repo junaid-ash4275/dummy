@@ -33,12 +33,16 @@ import ZenFocus from "./components/ZenFocus";
 import TimeZoneConverter from "./components/TimeZoneConverter";
 import LifeProgressTracker from "./components/LifeProgressTracker";
 import FlashcardApp from "./components/FlashcardApp";
+import InvestmentCalculator from "./components/InvestmentCalculator";
+
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
       <GradientGenerator />
       <LifeProgressTracker />
+      <InvestmentCalculator />
+
       <TimeZoneConverter />
       <FlashcardApp />
       <ReadingSpeedTest />
