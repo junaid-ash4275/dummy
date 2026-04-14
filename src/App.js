@@ -34,18 +34,18 @@ import TimeZoneConverter from "./components/TimeZoneConverter";
 import LifeProgressTracker from "./components/LifeProgressTracker";
 import FlashcardApp from "./components/FlashcardApp";
 import InvestmentCalculator from "./components/InvestmentCalculator";
-import CarbonFootprintCalculator from "./components/CarbonFootprintCalculator";
+import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 
 
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <GlassmorphismGenerator />
       <GradientGenerator />
       <CarbonFootprintCalculator />
       <LifeProgressTracker />
       <InvestmentCalculator />
-
       <TimeZoneConverter />
       <FlashcardApp />
       <ReadingSpeedTest />
