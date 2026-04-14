@@ -43,6 +43,7 @@ function App() {
     <div className="min-h-screen bg-gray-50 pb-10">
       <GlassmorphismGenerator />
       <GradientGenerator />
+      <CarbonFootprintCalculator />
       <LifeProgressTracker />
       <InvestmentCalculator />
       <TimeZoneConverter />
