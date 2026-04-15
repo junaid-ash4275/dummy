@@ -35,6 +35,9 @@ import LifeProgressTracker from "./components/LifeProgressTracker";
 import FlashcardApp from "./components/FlashcardApp";
 import InvestmentCalculator from "./components/InvestmentCalculator";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
+import CarbonFootprintCalculator from "./components/CarbonFootprintCalculator";
+import BlobGenerator from "./components/BlobGenerator";
+
 
 
 
@@ -42,6 +45,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
       <GlassmorphismGenerator />
+      <BlobGenerator />
       <GradientGenerator />
       <CarbonFootprintCalculator />
       <LifeProgressTracker />
