@@ -37,6 +37,8 @@ import InvestmentCalculator from "./components/InvestmentCalculator";
 import GlassmorphismGenerator from "./components/GlassmorphismGenerator";
 import CarbonFootprintCalculator from "./components/CarbonFootprintCalculator";
 import BlobGenerator from "./components/BlobGenerator";
+import NeumorphismStudio from "./components/NeumorphismStudio";
+
 
 
 
@@ -44,6 +46,7 @@ import BlobGenerator from "./components/BlobGenerator";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <NeumorphismStudio />
       <GlassmorphismGenerator />
       <BlobGenerator />
       <GradientGenerator />
