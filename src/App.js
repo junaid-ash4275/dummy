@@ -39,6 +39,7 @@ import CarbonFootprintCalculator from "./components/CarbonFootprintCalculator";
 import BlobGenerator from "./components/BlobGenerator";
 import NeumorphismStudio from "./components/NeumorphismStudio";
 import FilterStudio from "./components/FilterStudio";
+import EmotionJournal from "./components/EmotionJournal";
 
 
 
@@ -47,6 +48,7 @@ import FilterStudio from "./components/FilterStudio";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <EmotionJournal />
       <FilterStudio />
       <NeumorphismStudio />
       <GlassmorphismGenerator />
