@@ -41,6 +41,7 @@ import NeumorphismStudio from "./components/NeumorphismStudio";
 import FilterStudio from "./components/FilterStudio";
 import EmotionJournal from "./components/EmotionJournal";
 import GratitudeJar from "./components/GratitudeJar";
+import ConstellationMaker from "./components/ConstellationMaker";
 
 
 
@@ -49,6 +50,7 @@ import GratitudeJar from "./components/GratitudeJar";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <ConstellationMaker />
       <GratitudeJar />
       <EmotionJournal />
       <FilterStudio />
