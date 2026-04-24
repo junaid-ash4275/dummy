@@ -42,6 +42,7 @@ import FilterStudio from "./components/FilterStudio";
 import EmotionJournal from "./components/EmotionJournal";
 import GratitudeJar from "./components/GratitudeJar";
 import ConstellationMaker from "./components/ConstellationMaker";
+import DecisionSpinner from "./components/DecisionSpinner";
 
 
 
@@ -50,6 +51,7 @@ import ConstellationMaker from "./components/ConstellationMaker";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <DecisionSpinner />
       <ConstellationMaker />
       <GratitudeJar />
       <EmotionJournal />
