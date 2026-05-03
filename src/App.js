@@ -44,6 +44,7 @@ import GratitudeJar from "./components/GratitudeJar";
 import ConstellationMaker from "./components/ConstellationMaker";
 import DecisionSpinner from "./components/DecisionSpinner";
 import FocusSoundscape from "./components/FocusSoundscape";
+import TypingSpeedTest from "./components/TypingSpeedTest";
 
 
 
@@ -52,6 +53,7 @@ import FocusSoundscape from "./components/FocusSoundscape";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <TypingSpeedTest />
       <FocusSoundscape />
       <DecisionSpinner />
       <ConstellationMaker />
