@@ -45,6 +45,7 @@ import ConstellationMaker from "./components/ConstellationMaker";
 import DecisionSpinner from "./components/DecisionSpinner";
 import FocusSoundscape from "./components/FocusSoundscape";
 import TypingSpeedTest from "./components/TypingSpeedTest";
+import ReactionTimeGame from "./components/ReactionTimeGame";
 
 
 
@@ -53,6 +54,7 @@ import TypingSpeedTest from "./components/TypingSpeedTest";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <ReactionTimeGame />
       <TypingSpeedTest />
       <FocusSoundscape />
       <DecisionSpinner />
