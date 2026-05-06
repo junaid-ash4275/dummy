@@ -46,6 +46,7 @@ import DecisionSpinner from "./components/DecisionSpinner";
 import FocusSoundscape from "./components/FocusSoundscape";
 import TypingSpeedTest from "./components/TypingSpeedTest";
 import ReactionTimeGame from "./components/ReactionTimeGame";
+import ColorContrastChecker from "./components/ColorContrastChecker";
 
 
 
@@ -54,6 +55,7 @@ import ReactionTimeGame from "./components/ReactionTimeGame";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <ColorContrastChecker />
       <ReactionTimeGame />
       <TypingSpeedTest />
       <FocusSoundscape />
