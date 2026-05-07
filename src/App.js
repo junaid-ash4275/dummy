@@ -47,6 +47,7 @@ import FocusSoundscape from "./components/FocusSoundscape";
 import TypingSpeedTest from "./components/TypingSpeedTest";
 import ReactionTimeGame from "./components/ReactionTimeGame";
 import ColorContrastChecker from "./components/ColorContrastChecker";
+import ChordProgressionGenerator from "./components/ChordProgressionGenerator";
 
 
 
@@ -55,6 +56,7 @@ import ColorContrastChecker from "./components/ColorContrastChecker";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50 pb-10">
+      <ChordProgressionGenerator />
       <ColorContrastChecker />
       <ReactionTimeGame />
       <TypingSpeedTest />
